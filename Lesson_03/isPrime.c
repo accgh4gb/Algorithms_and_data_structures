@@ -18,7 +18,7 @@ bool isPrime(int n)
             int d = 3;
             while (d * d <= n)
             {
-                if (n % d)
+                if (n % d != 0)
                 {
                     d += 2;
                 }
