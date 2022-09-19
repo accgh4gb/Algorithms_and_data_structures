@@ -1,5 +1,14 @@
 #include <stdio.h>
 
+void DecToBin(int num)
+{
+    if (num >= 2)
+    {
+        DecToBin(num / 2);
+    }
+    printf("%d", num % 2);
+}
+
 int exponentiation(int num, int exp)
 {
     int result = 0;
@@ -21,8 +30,17 @@ int exponentiation(int num, int exp)
 
 int main()
 {
+    {
+        int num;
+        scanf("%d", &num);
+        DecToBin(num);
+        printf("\n");
+    }
+
+    {
     int num = 5;
     int exp = 11;
-    printf("The value of the number %d to the power of %d is %d\n", num, exp, exponentiation(num,exp));
+    printf("The value of the number %d to the power of %d is %d\n", num, exp, exponentiation(num, exp));
     return 0;
+    }   
 }
